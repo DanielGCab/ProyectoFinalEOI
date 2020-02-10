@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista Productos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar autocomplete autocorrect placeholder="Buscar producto"></ion-searchbar>
+<ion-item>
+  <ion-label>Ordenar por
+  <ion-segment>
+    <ion-segment-button  value="dogs">
+      <ion-label>Precio</ion-label>
+    </ion-segment-button>
+    <ion-segment-button  value="cats">
+      <ion-label>Nombre</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-label>
+</ion-item>
+
+ 
+<ion-list>
+  <div *ngFor="let producto of productos">
+  <ion-card>
+    <ion-card-header>
+      <img [src]="producto.imagen" alt="">
+      <ion-card-title>{{producto.nombre}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{producto.descripcion}}
+    </ion-card-content>
+  </ion-card>
+</div>
+</ion-list>
+<img src="../../resources/cara1.jpg" alt="">
+</ion-content>
