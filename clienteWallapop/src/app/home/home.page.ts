@@ -9,4 +9,16 @@ export class HomePage {
 
   constructor() {}
 
+  iniciarSesion() {
+
+  }
+
+  registro() {
+
+  }
+
+  invitado() {
+    
+  }
+
 }

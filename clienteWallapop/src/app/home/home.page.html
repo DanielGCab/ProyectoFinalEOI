@@ -1,14 +1,16 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Wallapop
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+  <div class="ion-padding" text-center>
+    <ion-label>Bienvenido</ion-label><br>
+    <ion-button [routerLink]="['/login']" [routerLinkActive]="['active']">Iniciar sesión</ion-button><br>
+    <ion-button [routerLink]="['/register']" [routerLinkActive]="['active']">Registrarse</ion-button><br>
+    <ion-button [routerLink]="['/ver-productos']" [routerLinkActive]="['active']">Entrar como invitado</ion-button><br>
   </div>
 </ion-content>
