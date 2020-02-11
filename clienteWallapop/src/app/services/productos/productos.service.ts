@@ -1,24 +1,23 @@
 import { Injectable } from '@angular/core';
+import { Producto } from 'src/app/interfaces/producto';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductosService {
-  productos = [
+  productos: Producto[] = [
     {
-      id: 1,
       nombre: 'Lechuga',
       descripcion: 'Una lechuga pocha advgfahdouvhdasiovhadoihvuodahviaudhvoiudavho',
       precio: 20,
-      usuarioProd: 'Pepe',
+      usuarioProd: 1,
       imagen: 'assets/cara1.jpg'
     },
     {
-      id: 2,
       nombre: 'Silla',
       descripcion: 'Silla de madera',
       precio: 10,
-      usuarioProd: 'Ramon',
+      usuarioProd: 2,
       imagen: 'assets/cara1.jpg'
     },
   ];
@@ -27,6 +26,10 @@ export class ProductosService {
 
   getProductos() {
     return this.productos;
+  }
+
+  addProducto(producto: Producto) {
+    this.productos.push(producto);
   }
 
 }

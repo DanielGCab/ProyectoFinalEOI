@@ -19,7 +19,12 @@ const routes: Routes = [
   {
     path: 'profile',
     loadChildren: () => import('./auth/profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'add-producto',
+    loadChildren: () => import('./producto/add-producto/add-producto.module').then( m => m.AddProductoPageModule)
   }
+
 
 
 ];
