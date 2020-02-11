@@ -13,3 +13,4 @@ export class ProductoDetalleComponent implements OnInit {
   ngOnInit() {}
 
 }
+ 
