@@ -23,10 +23,11 @@ const routes: Routes = [
   {
     path: 'detalle-producto',
     loadChildren: () => import('./producto/detalle-producto/detalle-producto.module').then( m => m.DetalleProductoPageModule)
+  },
+  {
+    path: 'add-producto',
+    loadChildren: () => import('./producto/add-producto/add-producto.module').then( m => m.AddProductoPageModule)
   }
-
-
-
 ];
 
 @NgModule({

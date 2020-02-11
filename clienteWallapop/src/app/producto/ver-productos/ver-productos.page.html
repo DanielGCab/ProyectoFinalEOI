@@ -1,24 +1,41 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>Lista Productos</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="primary">
+ 
   <ion-searchbar autocomplete autocorrect placeholder="Buscar producto"></ion-searchbar>
-<ion-item>
-  <ion-label>Ordenar por
-  <ion-segment>
-    <ion-segment-button value="precio" (click)="ordenarPrecio()">
-      <ion-label>Precio</ion-label>
+<ion-item color="primary">
+  <ion-label text-center>Ordenar por
+  <ion-segment color="tertiary">
+    <ion-segment-button value="precio" (click)="ordenarPrecio()" >
+      <ion-label style="color: aliceblue;">Precio</ion-label>
     </ion-segment-button>
     <ion-segment-button value="nombre" (click)="ordenarNombre()">
-      <ion-label>Nombre</ion-label>
+      <ion-label style="color: aliceblue;">Nombre</ion-label>
     </ion-segment-button>
   </ion-segment>
 </ion-label>
 </ion-item>
+<!-- style="background-color: rgb(57, 126, 255);" -->
 
+<ion-list style="background-color: rgb(57, 126, 255);">
+  <div *ngFor="let producto of productos" >
+  <ion-card color="tertiary">
+    <ion-card-header>
+      <img [src]="producto.imagen">
+      <ion-card-title>{{producto.nombre}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{producto.descripcion}}
+      {{producto.precio}}
+    </ion-card-content>
+  </ion-card>
+</div>
+</ion-list>
 
 <div class="card-columns mt-4">
   <app-detalle-producto [producto]="producto"

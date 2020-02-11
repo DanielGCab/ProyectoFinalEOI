@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Añadir producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="primary">
+<form #form="ngForm">
+    <ion-item >
+      <ion-label position="floating" color="primary">Nombre del producto</ion-label>
+      <ion-input type="text" class="form-controll" required></ion-input>
+    </ion-item>
+    <ion-item >
+      <ion-label position="floating" color="primary">Descripción del producto</ion-label>
+      <ion-input type="text" class="form-controll" required></ion-input>
+    </ion-item>
+    <ion-item >
+      <ion-label color="primary">Imagen del producto</ion-label>
+      <ion-input type="file" class="form-controll" required></ion-input>
+    </ion-item>
+    <ion-item >
+      <ion-label position="floating" color="primary">Precio del producto</ion-label>
+      <ion-input type="number" class="form-controll" required></ion-input>
+    </ion-item>
+    <div padding>
+      <ion-button size="large" type="submit" [disabled]="form.invalid" expand="block">Subir producto</ion-button>
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </div>
+  </form>
+</ion-content>
