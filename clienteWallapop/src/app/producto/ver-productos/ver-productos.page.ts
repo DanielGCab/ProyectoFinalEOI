@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Producto } from '../../interfaces/producto';
 import { ProductosService } from 'src/app/services/productos/productos.service';
 
 @Component({
@@ -7,12 +8,17 @@ import { ProductosService } from 'src/app/services/productos/productos.service';
   styleUrls: ['./ver-productos.page.scss'],
 })
 export class VerProductosPage implements OnInit {
-  productos = [];
+  productos: Producto[] = [];
   constructor(private productoService: ProductosService) { }
 
   ngOnInit() {
     this.productos = this.productoService.getProductos();
     console.log(this.productos);
+  }
+
+  ordenarPrecio() {
+    this.productos.sort((p1, p2) => p1.precio - p2.precio);
+    this.productos = [...this.productos];
   }
 
 }

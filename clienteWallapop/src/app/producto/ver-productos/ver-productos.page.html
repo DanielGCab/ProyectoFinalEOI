@@ -9,27 +9,27 @@
 <ion-item>
   <ion-label>Ordenar por
   <ion-segment>
-    <ion-segment-button  value="dogs">
+    <ion-segment-button value="precio" (click)="ordenarPrecio()">
       <ion-label>Precio</ion-label>
     </ion-segment-button>
-    <ion-segment-button  value="cats">
+    <ion-segment-button value="nombre">
       <ion-label>Nombre</ion-label>
     </ion-segment-button>
   </ion-segment>
 </ion-label>
 </ion-item>
 
- 
 <ion-list>
   <div *ngFor="let producto of productos">
   <ion-card>
     <ion-card-header>
-      <img src="../../../assets/cara1.jpg" alt="">
+      <img [src]="producto.imagen">
       <ion-card-title>{{producto.nombre}}</ion-card-title>
     </ion-card-header>
   
     <ion-card-content>
       {{producto.descripcion}}
+      {{producto.precio}}
     </ion-card-content>
   </ion-card>
 </div>

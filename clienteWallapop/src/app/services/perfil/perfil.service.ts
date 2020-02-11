@@ -4,13 +4,18 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class PerfilService {
-  perfil ={
-    nombre: "Pepe"
-  }
+  perfil = {
+    nombre: 'Pepe',
+    apellidos: 'Albert',
+    nick: 'pep',
+    imagen: 'assets/cara1.jpg',
+    email: 'pep@hotmail.com',
+    telefono: '658965325'
+  };
 
   constructor() { }
 
-  getPerfil(){
-    return
+  getPerfil() {
+    return this.perfil;
   }
 }

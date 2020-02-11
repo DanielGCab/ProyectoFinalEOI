@@ -6,4 +6,15 @@
 
 <ion-content>
   
+  <div class="card-body">
+    <h4 class="card-title">{{usuario.nick}}</h4>
+    <ion-avatar>
+      <img [src]="usuario.imagen"/>
+    </ion-avatar>
+    <p class="card-text" [innerText]="usuario.nombre"></p>
+    <p class="card-text" [innerText]="usuario.apellidos"></p>
+    <p class="card-text" [innerText]="usuario.email"></p>
+    <p class="card-text" [innerText]="usuario.telefono"></p>
+    
+  </div>
 </ion-content>

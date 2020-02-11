@@ -11,7 +11,7 @@ export class ProductosService {
       descripcion: 'Una lechuga pocha advgfahdouvhdasiovhadoihvuodahviaudhvoiudavho',
       precio: 1.20,
       usuarioProd: 'Pepe',
-      imagen: '../../resources/cara1.jpg'
+      imagen: 'assets/cara1.jpg'
     },
     {
       id: 2,
@@ -19,7 +19,7 @@ export class ProductosService {
       descripcion: 'Silla de madera',
       precio: 10,
       usuarioProd: 'Ramon',
-      imagen: '../../resources/cara1.jpg'
+      imagen: 'assets/cara1.jpg'
     },
   ];
 
@@ -29,5 +29,4 @@ export class ProductosService {
     return this.productos;
   }
 
-  
 }
