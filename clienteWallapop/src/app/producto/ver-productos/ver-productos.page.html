@@ -19,20 +19,10 @@
 </ion-label>
 </ion-item>
 
-<ion-list>
-  <div *ngFor="let producto of productos">
-  <ion-card>
-    <ion-card-header>
-      <img [src]="producto.imagen">
-      <ion-card-title>{{producto.nombre}}</ion-card-title>
-    </ion-card-header>
-  
-    <ion-card-content>
-      {{producto.descripcion}}
-      {{producto.precio}}
-    </ion-card-content>
-  </ion-card>
-</div>
-</ion-list>
 
+<div class="card-columns mt-4">
+  <app-detalle-producto [producto]="producto"
+  *ngFor="let producto of productos">
+  </app-detalle-producto>
+</div>
 </ion-content>

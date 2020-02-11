@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="card-body">
+    <h4 class="card-title">{{producto.nombre}}</h4>
+    <ion-avatar>
+      <img [src]="producto.imagen"/>
+    </ion-avatar>
+    <p class="card-text" [innerText]="producto.descripcion"></p>
+    <p class="card-text" [innerText]="producto.precio"></p>
+    
+  </div>
+</ion-content>

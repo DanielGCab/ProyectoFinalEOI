@@ -29,4 +29,8 @@ export class ProductosService {
     return this.productos;
   }
 
+  getProducto(id: number) {
+    return this.productos[id];
+  }
+
 }
