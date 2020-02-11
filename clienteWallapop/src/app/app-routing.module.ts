@@ -12,6 +12,10 @@ const routes: Routes = [
     path: 'ver-productos',
     loadChildren: () => import('./producto/ver-productos/ver-productos.module').then( m => m.VerProductosPageModule)
   },
+  {
+    path: 'register',
+    loadChildren: () => import('./auth/register/register.module').then( m => m.RegisterPageModule)
+  },
 
 
 ];
