@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { PerfilService } from '../perfil.service';
+import { PerfilService } from './perfil.service';
 
 describe('PerfilService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));

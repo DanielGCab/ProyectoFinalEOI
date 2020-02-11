@@ -21,25 +21,9 @@
 </ion-item>
 <!-- style="background-color: rgb(57, 126, 255);" -->
 
-<ion-list style="background-color: rgb(57, 126, 255);">
-  <div *ngFor="let producto of productos" >
-  <ion-card color="tertiary">
-    <ion-card-header>
-      <img [src]="producto.imagen">
-      <ion-card-title>{{producto.nombre}}</ion-card-title>
-    </ion-card-header>
-  
-    <ion-card-content>
-      {{producto.descripcion}}
-      {{producto.precio}}
-    </ion-card-content>
-  </ion-card>
-</div>
-</ion-list>
+
 
 <div class="card-columns mt-4">
-  <app-detalle-producto [producto]="producto"
-  *ngFor="let producto of productos">
-  </app-detalle-producto>
+  <app-producto-detalle *ngFor="let producto of productos" [producto]="producto"></app-producto-detalle>
 </div>
 </ion-content>

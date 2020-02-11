@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { ProductosService } from '../perfil/productos.service';
+import { ProductosService } from './productos.service';
 
 
 
