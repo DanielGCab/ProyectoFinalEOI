@@ -9,7 +9,7 @@ export class ProductosService {
       id: 1,
       nombre: 'Lechuga',
       descripcion: 'Una lechuga pocha advgfahdouvhdasiovhadoihvuodahviaudhvoiudavho',
-      precio: 1.20,
+      precio: 20,
       usuarioProd: 'Pepe',
       imagen: 'assets/cara1.jpg'
     },

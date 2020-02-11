@@ -21,4 +21,9 @@ export class VerProductosPage implements OnInit {
     this.productos = [...this.productos];
   }
 
+  ordenarNombre() {
+    this.productos.sort((p1, p2) => p1.nombre.localeCompare(p2.nombre));
+    this.productos = [...this.productos];
+  }
+
 }
