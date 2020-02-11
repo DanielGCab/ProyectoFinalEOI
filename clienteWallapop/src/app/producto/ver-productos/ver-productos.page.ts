@@ -13,7 +13,6 @@ export class VerProductosPage implements OnInit {
   ngOnInit() {
     this.productos = this.productoService.getProductos();
     console.log(this.productos);
-    
   }
 
 }
