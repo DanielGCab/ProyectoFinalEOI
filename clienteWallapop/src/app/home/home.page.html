@@ -1,15 +1,20 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
+    
     <ion-title>
-      Wallapop
+      <ion-icon name="cloud"></ion-icon> Wallapof
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+
+<ion-content color="primary" padding>
+  <div class="ion-padding" text-center>
+    <img src="../../assets/wallapof.png" alt="">
+  </div>
   <div class="ion-padding" text-center>
     <ion-label>Bienvenido</ion-label><br>
-    <ion-button [routerLink]="['/login']" [routerLinkActive]="['active']">Iniciar sesión</ion-button><br>
+    <ion-button [routerLink]="['/login']" [routerLinkActive]="['active']">Iniciar sesión</ion-button>
     <ion-button [routerLink]="['/register']" [routerLinkActive]="['active']">Registrarse</ion-button><br>
     <ion-button [routerLink]="['/ver-productos']" [routerLinkActive]="['active']">Entrar como invitado</ion-button><br>
   </div>
