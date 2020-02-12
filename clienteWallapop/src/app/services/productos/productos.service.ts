@@ -3,6 +3,7 @@ import { Producto } from 'src/app/interfaces/producto';
 import { HttpClient } from '@angular/common/http';
 import { ProductosResponse, ProductoResponse } from 'src/app/interfaces/responses';
 import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -30,8 +31,8 @@ export class ProductosService {
   constructor(private http: HttpClient) { }
 
 
-  getProductos() {
-    return this.http.get<ProductosResponse>(this.url);
+  getProductos(): Observable<Producto[]> {
+    return this.http.get<Producto[]>(this.url);
   }
 
   addProducto(producto: Producto) {
