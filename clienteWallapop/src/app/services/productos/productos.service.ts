@@ -15,7 +15,7 @@ export class ProductosService {
       descripcion: 'Una lechuga pocha',
       precio: 20,
       usuarioProd: 1,
-      imagen: 'assets/cara1.jpg'
+      imagen: ''
     },
     {
       nombre: 'Silla',
@@ -26,7 +26,7 @@ export class ProductosService {
     },
   ];*/
 
-  private url = 'http://192.168.1.55:8080/api/productos';
+  private url = 'http://localhost:8080/api/productos';
 
   constructor(private http: HttpClient) { }
 
@@ -34,9 +34,8 @@ export class ProductosService {
   getProductos(): Observable<Producto[]> {
     return this.http.get<Producto[]>(this.url);
   }
-
-  getProducto(id: number): Observable<Producto[]> {
-    return this.http.get<Producto[]>(this.url + '/' + id);
+  getProducto(id: number): Observable<Producto> {
+    return this.http.get<Producto>(this.url + '/' + id);
   }
 
   addProducto(producto: Producto) {
