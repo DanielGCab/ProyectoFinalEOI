@@ -15,12 +15,8 @@ export class VerProductosPage implements OnInit {
     this.productoService.getProductos().subscribe(
       respuesta => {
         this.productos = respuesta;
-        console.log(this.productos);
       }
-
     );
-
-   
   }
 
   ordenarPrecio() {
