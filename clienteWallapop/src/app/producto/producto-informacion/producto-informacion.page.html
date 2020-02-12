@@ -4,18 +4,18 @@
   </ion-toolbar>
 </ion-header>
 <ion-content >
- <div>
+<div *ngIf="producto">
 <ion-card color="succes" >
     <ion-card-header text-center>
       <img [src]="" style="margin-left: 65px;">
-      <ion-card-title>{{producto[0].nombre}}</ion-card-title>
+      <ion-card-title>{{producto.nombre}}</ion-card-title>
     </ion-card-header>
     
     <ion-card-content>
       <b>Descripción: </b>
-     <p> {{producto[0].descripcion}}</p>
+     <p> {{producto.descripcion}}</p>
 
-      <p><b> Precio:<br>  $ {{producto[0].precio}} </b></p>
+      <p><b> Precio:<br>  $ {{producto.precio}} </b></p>
     </ion-card-content>
     <ion-button style="text-align: center; margin-left: 90px;">Comprar</ion-button>   <ion-back-button defaultHref="ver-productos">Volver</ion-back-button> <br> <br>
   </ion-card>

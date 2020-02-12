@@ -6,7 +6,7 @@ import { ProductoDetalleComponent } from './compartido/producto-detalle/producto
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 
-  { path: 'producto-detalle', component: ProductoDetalleComponent },
+  //{ path: 'producto-detalle', component: ProductoDetalleComponent },
 
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   {
@@ -16,6 +16,10 @@ const routes: Routes = [
   {
     path: 'ver-productos',
     loadChildren: () => import('./producto/ver-productos/ver-productos.module').then( m => m.VerProductosPageModule)
+  },
+  {
+    path: 'ver-productos/:id',
+    loadChildren: () => import('./producto/producto-informacion/producto-informacion.module').then( m => m.ProductoInformacionPageModule)
   },
   {
     path: 'register',
@@ -28,7 +32,8 @@ const routes: Routes = [
   {
     path: 'add-producto',
     loadChildren: () => import('./producto/add-producto/add-producto.module').then( m => m.AddProductoPageModule)
-  },  {
+  },
+  {
     path: 'producto-informacion',
     loadChildren: () => import('./producto/producto-informacion/producto-informacion.module').then( m => m.ProductoInformacionPageModule)
   },
