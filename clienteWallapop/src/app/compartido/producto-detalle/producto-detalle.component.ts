@@ -8,11 +8,11 @@ import { Producto } from 'src/app/interfaces/producto';
 })
 export class ProductoDetalleComponent implements OnInit {
   @Input() producto: Producto;
+  
   constructor() { }
 
   ngOnInit() {
-    console.log("Producto dettale " + this.producto);
-    
+   
   }
 
 }

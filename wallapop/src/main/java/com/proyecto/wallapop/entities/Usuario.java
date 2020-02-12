@@ -2,14 +2,19 @@ package com.proyecto.wallapop.entities;
 
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Usuario {
@@ -40,6 +45,10 @@ public class Usuario {
 	
 	@Column
 	private String telefono;
+	
+    @OneToMany(mappedBy="usuario")
+    @JsonIgnore
+    private Set<Producto> producto;
 	
 	
 
