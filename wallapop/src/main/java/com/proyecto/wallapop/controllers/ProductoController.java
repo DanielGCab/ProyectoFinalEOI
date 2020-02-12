@@ -29,7 +29,7 @@ import com.proyecto.wallapop.services.IProductoService;
 
 
 
-@CrossOrigin(origins = {"http://localhost:4200"})
+@CrossOrigin
 @RestController
 @RequestMapping("/api")
 public class ProductoController {

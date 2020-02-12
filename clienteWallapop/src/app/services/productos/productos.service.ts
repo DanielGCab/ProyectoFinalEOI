@@ -25,17 +25,13 @@ export class ProductosService {
     },
   ];*/
 
-  private url: 'http://192.168.1.55:8080/api/productos';
+  private url = 'http://localhost:8080/api/productos';
 
   constructor(private http: HttpClient) { }
 
+
   getProductos() {
-    return this.http.get<ProductosResponse>(this.url).pipe(
-      map(resp => {
-        console.log(resp);
-        return resp.productos;
-      })
-    );
+    return this.http.get<ProductosResponse>(this.url);
   }
 
   addProducto(producto: Producto) {
