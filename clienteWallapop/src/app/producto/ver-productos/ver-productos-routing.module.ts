@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { VerProductosPage } from './ver-productos.page';
-import { ProductoDetalleComponent } from '../producto-detalle/producto-detalle.component';
+import { ProductoDetalleComponent } from '../../compartido/producto-detalle/producto-detalle.component';
 
 const routes: Routes = [
   {

@@ -7,15 +7,17 @@ import { IonicModule } from '@ionic/angular';
 import { VerProductosPageRoutingModule } from './ver-productos-routing.module';
 
 import { VerProductosPage } from './ver-productos.page';
-import { ProductoDetalleComponent } from '../producto-detalle/producto-detalle.component';
+import { ProductoDetalleComponent } from '../../compartido/producto-detalle/producto-detalle.component';
+import { CompartidoModule } from 'src/app/compartido/compartido.module';
 
 @NgModule({
+  declarations: [VerProductosPage],
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     VerProductosPageRoutingModule,
+    CompartidoModule
   ],
-  declarations: [VerProductosPage, ProductoDetalleComponent],
 })
 export class VerProductosPageModule {}
