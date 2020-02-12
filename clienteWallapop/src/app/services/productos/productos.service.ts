@@ -35,8 +35,8 @@ export class ProductosService {
     return this.http.get<Producto[]>(this.url);
   }
 
-  getProducto(id: number): Observable<Producto[]> {
-    return this.http.get<Producto[]>(this.url + '/' + id);
+  getProducto(id: number): Observable<Producto> {
+    return this.http.get<Producto>(this.url + '/' + id);
   }
 
   addProducto(producto: Producto) {
