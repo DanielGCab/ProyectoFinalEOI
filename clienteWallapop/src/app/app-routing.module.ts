@@ -28,7 +28,15 @@ const routes: Routes = [
   {
     path: 'add-producto',
     loadChildren: () => import('./producto/add-producto/add-producto.module').then( m => m.AddProductoPageModule)
+  },  {
+    path: 'producto-informacion',
+    loadChildren: () => import('./producto/producto-informacion/producto-informacion.module').then( m => m.ProductoInformacionPageModule)
+  },
+  {
+    path: 'producto-editar',
+    loadChildren: () => import('./producto/producto-editar/producto-editar.module').then( m => m.ProductoEditarPageModule)
   }
+
 ];
 
 @NgModule({
