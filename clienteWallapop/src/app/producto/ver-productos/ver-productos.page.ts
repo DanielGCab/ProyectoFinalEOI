@@ -12,8 +12,9 @@ export class VerProductosPage implements OnInit {
   constructor(private productoService: ProductosService) { }
 
   ngOnInit() {
-    this.productos = this.productoService.getProductos();
-    console.log(this.productos);
+    this.productoService.getProductos().subscribe(
+      productos => this.productos = productos
+    );
   }
 
   ordenarPrecio() {
