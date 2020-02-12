@@ -17,6 +17,7 @@ export class VerProductosPage implements OnInit {
         this.productos = respuesta;
       }
     );
+
   }
 
   ordenarPrecio() {

@@ -1,6 +1,8 @@
 <ion-card color="tertiary" style="float: left;"  [routerLink]="['/ver-productos', producto.id]">
+<ion-card color="tertiary" style="float: left;"  [routerLink]="['/producto-informacion', producto]">
+
   <ion-card-header>
-    <img [src]="" style="margin-left: 65px;">
+    <img [src]="producto?.imagen" style="margin-left: 65px;">
     <ion-card-title>{{producto.nombre}}</ion-card-title>
   </ion-card-header>
 
