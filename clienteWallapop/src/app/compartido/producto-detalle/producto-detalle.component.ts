@@ -10,6 +10,9 @@ export class ProductoDetalleComponent implements OnInit {
   @Input() producto: Producto;
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log("Producto dettale " + this.producto);
+    
+  }
 
 }

@@ -12,11 +12,9 @@ export class ProductoInformacionPage implements OnInit {
   constructor(private productosService: ProductosService) { }
 
   ngOnInit() {
-    this.producto = this.productosService.getProductos();
+   
   }
 
-  getProducto() {
-    this.producto = this.productosService.getProductos();
-  }
+
 
 }

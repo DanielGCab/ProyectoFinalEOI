@@ -8,13 +8,19 @@ import { ProductosService } from 'src/app/services/productos/productos.service';
   styleUrls: ['./ver-productos.page.scss'],
 })
 export class VerProductosPage implements OnInit {
-  productos: Producto[] = [];
+  productos: Producto[];
   constructor(private productoService: ProductosService) { }
 
   ngOnInit() {
     this.productoService.getProductos().subscribe(
-      productos => this.productos = productos
+      respuesta => {
+        this.productos = respuesta;
+        console.log(this.productos);
+      }
+
     );
+
+   
   }
 
   ordenarPrecio() {

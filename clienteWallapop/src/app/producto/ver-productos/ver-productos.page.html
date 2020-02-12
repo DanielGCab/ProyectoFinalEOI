@@ -4,7 +4,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content >
+<ion-content *ngIf="productos">
  
   <ion-searchbar autocomplete autocorrect placeholder="Buscar producto"></ion-searchbar>
 <ion-item color="primary">
@@ -20,10 +20,13 @@
 </ion-label>
 </ion-item>
 <!-- style="background-color: rgb(57, 126, 255);" -->
+<p>hola</p>
+<div  *ngFor="let producto of productos" >
+  {{producto.nombre}}
+</div>
 
 
-
-<div class="card-columns mt-4">
+<div class="card-columns mt-4" >
   <app-producto-detalle *ngFor="let producto of productos" [producto]="producto"></app-producto-detalle>
 </div>
 </ion-content>
