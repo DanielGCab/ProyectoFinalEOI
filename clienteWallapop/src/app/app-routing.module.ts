@@ -1,12 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { ProductoDetalleComponent } from './compartido/producto-detalle/producto-detalle.component';
-
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-
-  //{ path: 'producto-detalle', component: ProductoDetalleComponent },
 
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   {
