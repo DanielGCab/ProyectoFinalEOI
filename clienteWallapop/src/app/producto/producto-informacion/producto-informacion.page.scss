@@ -1,0 +1,16 @@
+
+ion-card{
+    width: 290px
+}
+
+img{
+    width: 120px;
+}
+div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+ion-card {
+    --ion-color-tertiary: #ffffff;
+  }

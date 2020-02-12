@@ -8,7 +8,7 @@ export class ProductosService {
   productos: Producto[] = [
     {
       nombre: 'Lechuga',
-      descripcion: 'Una lechuga pocha advgfahdouvhdasiovhadoihvuodahviaudhvoiudavho',
+      descripcion: 'Una lechuga pocha',
       precio: 20,
       usuarioProd: 1,
       imagen: 'assets/cara1.jpg'
@@ -18,7 +18,7 @@ export class ProductosService {
       descripcion: 'Silla de madera',
       precio: 10,
       usuarioProd: 2,
-      imagen: 'assets/cara1.jpg'
+      imagen: 'assets/wallapof.png'
     },
   ];
 
