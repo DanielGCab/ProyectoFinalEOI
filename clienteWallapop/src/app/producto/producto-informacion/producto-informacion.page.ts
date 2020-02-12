@@ -17,7 +17,7 @@ export class ProductoInformacionPage implements OnInit {
     /*const id = this.route.snapshot.params.id;
      this.productosService.getProducto(id).subscribe(
        resp => {
-         this.producto = resp.product;
+         this.producto = resp;
        }
      );*/
   }
