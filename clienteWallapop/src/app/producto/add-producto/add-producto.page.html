@@ -23,7 +23,7 @@
       <ion-input type="number" class="form-controll" required></ion-input>
     </ion-item>
     <div padding>
-      <ion-button size="large" type="submit" [disabled]="form.invalid" expand="block">Subir producto</ion-button>
+      <ion-button size="large" type="submit" (click)="add()" expand="block">Subir producto</ion-button>
       <ion-back-button defaultHref="home"></ion-back-button>
     </div>
   </form>

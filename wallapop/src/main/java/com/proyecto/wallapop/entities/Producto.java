@@ -46,9 +46,9 @@ public class Producto {
 	@Column
 	private String imagen;
 	
-	@NotEmpty(message="El precio no puede estar vacío")
+
 	@Column(nullable = false)
-	private BigDecimal precio;
+	private Double precio;
 	
 	 @ManyToOne(fetch = FetchType.EAGER, optional = false)
 	 private Usuario usuario;
@@ -68,7 +68,7 @@ public class Producto {
 	public Producto(int id,
 			@NotEmpty(message = "El nombre no puede estar vacío") @Size(min = 3, max = 25, message = "el tamaño tiene que estar entre 3 y 25") String nombre,
 			@NotEmpty(message = "El campo descripcion no puede estar vacío") @Size(max = 200, message = "El tamaño máximo es de 200 caracteres") String descripcion,
-			String imagen, @NotEmpty(message = "El precio no puede estar vacío") BigDecimal precio, Usuario usuario) {
+			String imagen, Double precio, Usuario usuario) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -146,7 +146,7 @@ public class Producto {
 
 
 
-	public BigDecimal getPrecio() {
+	public Double getPrecio() {
 		return precio;
 	}
 
@@ -154,7 +154,7 @@ public class Producto {
 
 
 
-	public void setPrecio(BigDecimal precio) {
+	public void setPrecio(Double precio) {
 		this.precio = precio;
 	}
 
@@ -181,6 +181,12 @@ public class Producto {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+
+
+
+
+
+
 
 	
 	 
