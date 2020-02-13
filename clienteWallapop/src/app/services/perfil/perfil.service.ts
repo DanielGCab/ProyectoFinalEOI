@@ -20,6 +20,10 @@ export class PerfilService {
 
   constructor(private http: HttpClient) { }
 
+  getUsuarios(): Observable<Usuario[]> {
+    return this.http.get<Usuario[]>(this.url);
+  }
+
   getUsuario(id: number): Observable<Usuario> {
     return this.http.get<Usuario>(this.url + '/' + id);
   }

@@ -1,4 +1,4 @@
-<ion-content color="primary" padding>
+<ion-content color="primary" padding *ngIf="usuarios">
   <form #form="ngForm" (ngSubmit)="login(form)">
     <ion-grid>
       <ion-row color="primary" justify-content-center>
@@ -8,14 +8,16 @@
           </div>
           <div padding>
             <ion-item>
-              <ion-input name="email" type="email" placeholder="Correo electrónico" ngModel required></ion-input>
+              <ion-label position="floating" color="primary">Nick</ion-label>
+              <ion-input name="email" class="form-controll" type="text"  [(ngModel)]="nick" required></ion-input>
             </ion-item>
             <ion-item>
-              <ion-input name="password" type="password" placeholder="Contraseña" ngModel required></ion-input>
+              <ion-label position="floating" color="primary">Contraseña</ion-label>
+              <ion-input name="password" type="text" class="form-controll" [(ngModel)]="contrasenya" required></ion-input>
             </ion-item>
           </div>
           <div padding>
-            <ion-button size="large" type="submit" [disabled]="form.invalid" expand="block">Iniciar sesion</ion-button>
+            <ion-button size="large" type="submit"  expand="block" (click)="logear()">Iniciar sesion</ion-button>
             <ion-back-button defaultHref="home"></ion-back-button>
           </div>
         </ion-col>

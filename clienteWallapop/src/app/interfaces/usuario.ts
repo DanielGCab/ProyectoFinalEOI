@@ -6,4 +6,5 @@ export interface Usuario {
     imagen?: string;
     email: string;
     telefono: string;
+    contrasenya: string;
 }

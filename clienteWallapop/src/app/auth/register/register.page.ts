@@ -32,7 +32,8 @@ export class RegisterPage implements OnInit {
       apellidos: '',
       nick: '',
       email: '',
-      telefono: ''
+      telefono: '',
+      contrasenya:''
     };
   }
 
