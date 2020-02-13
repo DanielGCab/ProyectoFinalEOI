@@ -26,15 +26,12 @@ export class LoginPage implements OnInit {
   login(form) {}
 
   logear() {
+    // tslint:disable-next-line: prefer-for-of
+    for (let index = 0; index < this.usuarios.length; index++) {
 
-
-// tslint:disable-next-line: prefer-for-of
-for (let index = 0; index < this.usuarios.length; index++) {
-
-if (this.usuarios[index].nick === this.nick && this.usuarios[index].contrasenya === this.contrasenya) {
-  this.router.navigate(['/profile/' + this.usuarios[index].id]);
-}
-}
-
+    if (this.usuarios[index].nick === this.nick && this.usuarios[index].contrasenya === this.contrasenya) {
+      this.router.navigate(['/profile/' + this.usuarios[index].id]);
+    }
+    }
   }
 }

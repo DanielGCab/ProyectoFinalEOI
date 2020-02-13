@@ -12,6 +12,7 @@ import { Usuario } from 'src/app/interfaces/usuario';
 export class AddProductoPage implements OnInit {
   id = this.route.snapshot.params.id;
   usuario: Usuario = {
+    id: this.route.snapshot.params.id,
     nombre: this.route.snapshot.params.nombre,
     apellidos: this.route.snapshot.params.apellidos,
     email: this.route.snapshot.params.email,
@@ -28,7 +29,6 @@ constructor(private productoService: ProductosService, private route: ActivatedR
 ngOnInit() {
   this.inicializarform();
   this.newProducto.usuario = this.usuario;
-  console.log(this.usuario);
 }
 
 addProducto(form) {
@@ -45,8 +45,15 @@ private inicializarform() {
     descripcion: '',
     precio: 0.0,
     imagen: ''
-    //usuario: null
   };
-  //console.log(this.newProducto);
+}
+
+changeImage(fileInput: HTMLInputElement) {
+  if (!fileInput.files || fileInput.files.length === 0) { return; }
+  const reader: FileReader = new FileReader();
+  reader.readAsDataURL(fileInput.files[0]);
+  reader.addEventListener('loadend', e => {
+    this.newProducto.imagen = reader.result as string;
+  });
 }
 }
