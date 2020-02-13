@@ -8,26 +8,29 @@
           </div>
           <div padding>
             <ion-item>
-              <ion-input name="nombre" type="text" placeholder="Nombre" [(ngModel)]="newUsuario.nombre" required></ion-input>
+              <ion-label position="floating" color="primary">Nombre</ion-label>
+              <ion-input name="nombre" class="form-controll" type="text"  [(ngModel)]="newUsuario.nombre" required></ion-input>
             </ion-item>
             <ion-item>
-              <ion-input name="apellidos" type="text" placeholder="Apellidos" [(ngModel)]="newUsuario.apellidos" required></ion-input>
+              <ion-label position="floating" color="primary">Apellidos</ion-label>
+              <ion-input name="apellidos" type="text"  class="form-controll" [(ngModel)]="newUsuario.apellidos" required></ion-input>
             </ion-item>
             <ion-item>
-              <ion-input name="nick" type="text" placeholder="Nick" [(ngModel)]="newUsuario.nick" required></ion-input>
+              <ion-label position="floating" color="primary">Nick</ion-label>
+              <ion-input name="nick" class="form-controll" type="text"  [(ngModel)]="newUsuario.nick" required></ion-input>
             </ion-item>
             
             <ion-item>
-              <ion-input name="email" type="email" placeholder="your@email.com" [(ngModel)]="newUsuario.email" required></ion-input>
+              <ion-label position="floating" color="primary">Email</ion-label>
+              <ion-input name="email" class="form-controll" type="email"  [(ngModel)]="newUsuario.email" required></ion-input>
             </ion-item>
             <ion-item>
-              <ion-input name="telefono" type="text" placeholder="Teléfono" [(ngModel)]="newUsuario.telefono"></ion-input>
+              <ion-label position="floating" color="primary">Telefono</ion-label>
+              <ion-input name="telefono" class="form-controll" type="text"  [(ngModel)]="newUsuario.telefono"></ion-input>
             </ion-item>
             <ion-item>
-              <ion-input name="password" type="password" placeholder="Contraseña" ngModel required></ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-input name="confirm" type="password" placeholder="Contraseña de nuevo" ngModel required></ion-input>
+              <ion-label position="floating" color="primary">Contraseña</ion-label>
+              <ion-input name="password" class="form-controll" type="password"  [(ngModel)]="newUsuario.contrasenya" required></ion-input>
             </ion-item>
           </div>
           <div padding>

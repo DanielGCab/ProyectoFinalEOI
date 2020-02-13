@@ -135,6 +135,7 @@ public class UsuarioController {
 			usuarioActual.setNick(usuario.getNick());
 			usuarioActual.setEmail(usuario.getEmail());
 			usuarioActual.setTelefono(usuario.getTelefono());
+			usuarioActual.setContrasenya(usuario.getContrasenya());
 		
 			
 			usuarioUpdated = UsuarioService.save(usuarioActual);

@@ -46,6 +46,9 @@ public class Usuario {
 	@Column
 	private String telefono;
 	
+	@Column
+	private String contrasenya;
+	
     @OneToMany(mappedBy="usuario")
     @JsonIgnore
     private Set<Producto> producto;
@@ -56,71 +59,132 @@ public class Usuario {
 		super();
 	}
 
-	public Usuario(
+
+
+	public Usuario(int id,
 			@NotEmpty(message = "El nombre no puede estar vacío") @Size(min = 3, max = 15, message = "el tamaño tiene que estar entre 3 y 15") String nombre,
 			@NotEmpty(message = "El apellido no puede estar vacio") String apellidos,
 			@NotEmpty(message = "El Nick no puede estar vacio") String nick,
 			@NotEmpty(message = "El email no puede estar vacio") @Email(message = "no es una dirección de correo bien formada") String email,
-			String telefono) {
+			String telefono, String contrasenya, Set<Producto> producto) {
 		super();
+		this.id = id;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.nick = nick;
 		this.email = email;
 		this.telefono = telefono;
+		this.contrasenya = contrasenya;
+		this.producto = producto;
 	}
+
+
 
 	public int getId() {
 		return id;
 	}
 
+
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
+
 
 	public String getNombre() {
 		return nombre;
 	}
 
+
+
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+
+
 
 	public String getApellidos() {
 		return apellidos;
 	}
 
+
+
 	public void setApellidos(String apellidos) {
 		this.apellidos = apellidos;
 	}
+
+
 
 	public String getNick() {
 		return nick;
 	}
 
+
+
 	public void setNick(String nick) {
 		this.nick = nick;
 	}
+
+
 
 	public String getEmail() {
 		return email;
 	}
 
+
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
+
 
 	public String getTelefono() {
 		return telefono;
 	}
 
+
+
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
 
+
+
+	public String getContrasenya() {
+		return contrasenya;
+	}
+
+
+
+	public void setContrasenya(String contrasenya) {
+		this.contrasenya = contrasenya;
+	}
+
+
+
+	public Set<Producto> getProducto() {
+		return producto;
+	}
+
+
+
+	public void setProducto(Set<Producto> producto) {
+		this.producto = producto;
+	}
+
+
+
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+
+
+
+
+
+
 	
 	
 	
