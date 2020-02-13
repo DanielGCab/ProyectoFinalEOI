@@ -8,14 +8,15 @@
           </div>
           <div padding>
             <ion-item>
-              <ion-input name="email" type="email" placeholder="Nick" [(ngModel)]="nick" required></ion-input>
+              <ion-label position="floating" color="primary">Nick</ion-label>
+              <ion-input name="email" class="form-controll" type="text"  [(ngModel)]="nick" required></ion-input>
             </ion-item>
             <ion-item>
-              <ion-input name="password" type="password" placeholder="Contraseña" [(ngModel)]="contrasenya" required></ion-input>
+              <ion-label position="floating" color="primary">Contraseña</ion-label>
+              <ion-input name="password" type="text" class="form-controll" [(ngModel)]="contrasenya" required></ion-input>
             </ion-item>
           </div>
           <div padding>
-            <ion-button (click)="logear()">Inicio sesion 2</ion-button>
             <ion-button size="large" type="submit"  expand="block" (click)="logear()">Iniciar sesion</ion-button>
             <ion-back-button defaultHref="home"></ion-back-button>
           </div>
