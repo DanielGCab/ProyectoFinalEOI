@@ -1,15 +1,12 @@
-import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
-import { ProductosService } from "src/app/services/productos/productos.service";
-import { Producto } from "src/app/interfaces/producto";
-import { Usuario } from "src/app/interfaces/usuario";
-import { ThrowStmt } from "@angular/compiler";
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Usuario } from 'src/app/interfaces/usuario';
 import { PerfilService } from 'src/app/services/perfil/perfil.service';
 
 @Component({
-  selector: "app-login",
-  templateUrl: "./login.page.html",
-  styleUrls: ["./login.page.scss"]
+  selector: 'app-login',
+  templateUrl: './login.page.html',
+  styleUrls: ['./login.page.scss']
 })
 export class LoginPage implements OnInit {
   usuarios: Usuario[];
@@ -30,13 +27,13 @@ export class LoginPage implements OnInit {
 
   logear() {
 
+
 // tslint:disable-next-line: prefer-for-of
 for (let index = 0; index < this.usuarios.length; index++) {
 
-if (this.usuarios[index].nick == this.nick && this.usuarios[index].contrasenya == this.contrasenya) {
-  this.router.navigate(['/profile/' + this.usuarios[index].id])
+if (this.usuarios[index].nick === this.nick && this.usuarios[index].contrasenya === this.contrasenya) {
+  this.router.navigate(['/profile/' + this.usuarios[index].id]);
 }
-  
 }
 
   }

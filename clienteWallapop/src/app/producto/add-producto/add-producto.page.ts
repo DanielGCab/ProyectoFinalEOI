@@ -11,7 +11,7 @@ import { Usuario } from 'src/app/interfaces/usuario';
 })
 export class AddProductoPage implements OnInit {
   id = this.route.snapshot.params.id;
-  usuario: Usuario ={
+  usuario: Usuario = {
     nombre: this.route.snapshot.params.nombre,
     apellidos: this.route.snapshot.params.apellidos,
     email: this.route.snapshot.params.email,
@@ -19,21 +19,34 @@ export class AddProductoPage implements OnInit {
     telefono: this.route.snapshot.params.tetefono,
     contrasenya: this.route.snapshot.params.contrasenya
   };
-  
 
-  constructor(private productoService: ProductosService, private route: ActivatedRoute) { }
+newProducto: Producto;
+anyadido = false;
 
-  ngOnInit() {
-console.log(this.usuario);
+constructor(private productoService: ProductosService, private route: ActivatedRoute, private router: Router) { }
 
-  }
+ngOnInit() {
+  this.inicializarform();
+  this.newProducto.usuario = this.usuario;
+  console.log(this.usuario);
+}
 
-  addProducto(producto: Producto) {
-    this.productoService.addProducto(producto);
-  }
-  add(){
- 
-    
-  }
+addProducto(form) {
+  this.productoService.addProducto(this.newProducto).subscribe(
+    resp => {
+      this.anyadido = true;
+      this.router.navigate(['/home']);
+    });
+}
 
+private inicializarform() {
+  this.newProducto = {
+    nombre: '',
+    descripcion: '',
+    precio: 0.0,
+    imagen: ''
+    //usuario: null
+  };
+  //console.log(this.newProducto);
+}
 }

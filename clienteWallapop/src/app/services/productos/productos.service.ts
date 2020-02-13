@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Producto } from 'src/app/interfaces/producto';
 import { HttpClient } from '@angular/common/http';
-import { ProductosResponse, ProductoResponse } from 'src/app/interfaces/responses';
-import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -40,11 +38,7 @@ export class ProductosService {
   }
 
   addProducto(producto: Producto) {
-    return this.http.post<ProductoResponse>(this.url, producto).pipe(
-      map(resp => {
-        return resp.producto;
-      })
-    );
+    return this.http.post<Producto>(this.url, producto);
   }
 
 }

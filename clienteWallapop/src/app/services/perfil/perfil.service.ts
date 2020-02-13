@@ -7,15 +7,6 @@ import { Usuario } from 'src/app/interfaces/usuario';
   providedIn: 'root'
 })
 export class PerfilService {
-  /*perfil = {
-    nombre: 'Pepe',
-    apellidos: 'Albert',
-    nick: 'pep',
-    imagen: 'assets/cara1.jpg',
-    email: 'pep@hotmail.com',
-    telefono: '658965325'
-  };*/
-
   private url = 'http://192.168.1.55:8080/api/usuarios';
 
   constructor(private http: HttpClient) { }

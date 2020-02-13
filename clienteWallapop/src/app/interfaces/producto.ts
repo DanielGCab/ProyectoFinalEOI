@@ -6,6 +6,6 @@ export interface Producto {
     descripcion: string;
     precio: number;
     imagen: string;
-    usuario: Usuario;
+    usuario?: Usuario;
 
 }

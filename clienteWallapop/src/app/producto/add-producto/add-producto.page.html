@@ -5,25 +5,25 @@
 </ion-header>
 
 <ion-content color="primary">
-<form #form="ngForm">
+<form #form="ngForm" (ngSubmit)="addProducto(form)">
     <ion-item >
       <ion-label position="floating" color="primary">Nombre del producto</ion-label>
-      <ion-input type="text" class="form-controll" required></ion-input>
+      <ion-input name="nombre" type="text" class="form-controll" [(ngModel)]="newProducto.nombre" required></ion-input>
     </ion-item>
     <ion-item >
       <ion-label position="floating" color="primary">Descripción del producto</ion-label>
-      <ion-input type="text" class="form-controll" required></ion-input>
+      <ion-input name="descripcion" type="text" class="form-controll" [(ngModel)]="newProducto.descripcion" required></ion-input>
     </ion-item>
     <ion-item >
       <ion-label color="primary">Imagen del producto</ion-label>
-      <ion-input type="file" class="form-controll" required></ion-input>
+      <ion-input name="imagen" type="text" class="form-controll" [(ngModel)]="newProducto.imagen" required></ion-input>
     </ion-item>
     <ion-item >
       <ion-label position="floating" color="primary">Precio del producto</ion-label>
-      <ion-input type="number" class="form-controll" required></ion-input>
+      <ion-input name="precio" type="number" class="form-controll" [(ngModel)]="newProducto.precio" required></ion-input>
     </ion-item>
     <div padding>
-      <ion-button size="large" type="submit" (click)="add()" expand="block">Subir producto</ion-button>
+      <ion-button size="large" type="submit" expand="block">Subir producto</ion-button>
       <ion-back-button defaultHref="home"></ion-back-button>
     </div>
   </form>
