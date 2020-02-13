@@ -2,24 +2,26 @@
 <div *ngIf="productos">
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>Perfil de {{usuario.nick}}</ion-title>
+    <ion-title>Perfil de {{usuario.nick}}   </ion-title>
+   
   </ion-toolbar>
 </ion-header>
 
 <ion-content fullscreen>
   
-  <ion-item color="primary">
-  <ion-label>Nombre y apellidos: {{usuario.nombre}} {{usuario.apellidos}}</ion-label>
-  <ion-label style="text-align: right;">
-    <ion-label>Email: {{usuario.email}}</ion-label> <br>
-    <ion-label>Teléfono: {{usuario.telefono}}</ion-label>
-  </ion-label>
-</ion-item>
+<br>
+  <ion-label>Nombre y apellidos: {{usuario.nombre}} {{usuario.apellidos}}</ion-label> <br> <br>
+    <ion-label>Email: {{usuario.email}}</ion-label> <br> <br>
+    <ion-label *ngIf="usuario?.telefono">Teléfono: {{usuario.telefono}}</ion-label> <br>
+    <ion-button [routerLink]="['/add-producto']"><ion-icon name="add"></ion-icon> Añadir Prodcuto</ion-button>
+
+
 <ion-item text-center color="primary">
 <ion-label>Productos</ion-label>
 </ion-item>
-
-<app-producto-detalle *ngFor="let producto of productosUsuario" [producto]="producto"></app-producto-detalle>
+<div  *ngFor="let producto of productos">
+<app-producto-detalle  *ngIf="producto.usuario.id == id" [producto]="producto"></app-producto-detalle>
+</div>
 </ion-content>
 </div>
 </div>
