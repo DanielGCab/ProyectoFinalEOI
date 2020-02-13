@@ -1,14 +1,14 @@
-import { Component, OnInit } from "@angular/core";
-import { Usuario } from "../../interfaces/usuario";
-import { PerfilService } from "src/app/services/perfil/perfil.service";
-import { ActivatedRoute } from "@angular/router";
-import { Producto } from "src/app/interfaces/producto";
-import { ProductosService } from "src/app/services/productos/productos.service";
+import { Component, OnInit } from '@angular/core';
+import { Usuario } from '../../interfaces/usuario';
+import { PerfilService } from 'src/app/services/perfil/perfil.service';
+import { ActivatedRoute } from '@angular/router';
+import { Producto } from 'src/app/interfaces/producto';
+import { ProductosService } from 'src/app/services/productos/productos.service';
 
 @Component({
-  selector: "app-profile",
-  templateUrl: "./profile.page.html",
-  styleUrls: ["./profile.page.scss"]
+  selector: 'app-profile',
+  templateUrl: './profile.page.html',
+  styleUrls: ['./profile.page.scss']
 })
 export class ProfilePage implements OnInit {
   usuario: Usuario;
@@ -34,7 +34,5 @@ export class ProfilePage implements OnInit {
 
     });
 
-
   }
- 
 }
