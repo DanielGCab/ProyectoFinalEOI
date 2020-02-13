@@ -1,4 +1,5 @@
 <div *ngIf="usuario">
+<div *ngIf="productos">
 <ion-header>
   <ion-toolbar color="primary">
     <ion-title>Perfil de {{usuario.nick}}</ion-title>
@@ -18,5 +19,7 @@
 <ion-label>Productos</ion-label>
 </ion-item>
 
+<app-producto-detalle *ngFor="let producto of productosUsuario" [producto]="producto"></app-producto-detalle>
 </ion-content>
+</div>
 </div>

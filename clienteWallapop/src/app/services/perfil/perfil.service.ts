@@ -16,7 +16,7 @@ export class PerfilService {
     telefono: '658965325'
   };*/
 
-  private url = 'http://localhost:8080/api/usuarios';
+  private url = 'http://192.168.1.55:8080/api/usuarios';
 
   constructor(private http: HttpClient) { }
 

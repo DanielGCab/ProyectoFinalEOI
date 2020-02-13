@@ -9,6 +9,8 @@ import { ProductosService } from 'src/app/services/productos/productos.service';
 })
 export class VerProductosPage implements OnInit {
   productos: Producto[];
+  search = '';
+
   constructor(private productoService: ProductosService) { }
 
   ngOnInit() {

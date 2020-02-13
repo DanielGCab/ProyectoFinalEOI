@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CompartidoModule } from './compartido/compartido.module';
 import { ProductoDetalleComponent } from './compartido/producto-detalle/producto-detalle.component';
+import { ProductFilterPipe } from './pipes/product-filter.pipe';
 
 @NgModule({
   declarations: [AppComponent],

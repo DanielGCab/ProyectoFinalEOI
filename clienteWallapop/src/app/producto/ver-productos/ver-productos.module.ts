@@ -9,9 +9,10 @@ import { VerProductosPageRoutingModule } from './ver-productos-routing.module';
 import { VerProductosPage } from './ver-productos.page';
 import { ProductoDetalleComponent } from '../../compartido/producto-detalle/producto-detalle.component';
 import { CompartidoModule } from 'src/app/compartido/compartido.module';
+import { ProductFilterPipe } from 'src/app/pipes/product-filter.pipe';
 
 @NgModule({
-  declarations: [VerProductosPage],
+  declarations: [VerProductosPage, ProductFilterPipe],
   imports: [
     CommonModule,
     FormsModule,
