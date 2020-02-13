@@ -7,7 +7,7 @@
 <div *ngIf="producto">
 <ion-card color="succes" >
     <ion-card-header text-center>
-      <img [src]="" style="margin-left: 65px;">
+      <img [src]="producto?.imagen" style="margin-left: 65px;">
       <ion-card-title>{{producto.nombre}}</ion-card-title>
     </ion-card-header>
     
@@ -16,8 +16,12 @@
      <p> {{producto.descripcion}}</p>
 
       <p><b> Precio:<br>  $ {{producto.precio}} </b></p>
+
+      <b>Usuario: </b>
+      <a [routerLink]="['/profile', producto.usuario.id]">{{producto.usuario.nick}}</a>
     </ion-card-content>
-    <ion-button style="text-align: center; margin-left: 90px;">Comprar</ion-button>   <ion-back-button defaultHref="ver-productos">Volver</ion-back-button> <br> <br>
+    <ion-button style="text-align: center; margin-left: 90px;">Comprar</ion-button>
+    <ion-back-button defaultHref="ver-productos">Volver</ion-back-button> <br> <br>
   </ion-card>
 
 </div>

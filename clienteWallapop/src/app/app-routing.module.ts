@@ -22,16 +22,12 @@ const routes: Routes = [
     loadChildren: () => import('./auth/register/register.module').then( m => m.RegisterPageModule)
   },
   {
-    path: 'profile',
+    path: 'profile/:id',
     loadChildren: () => import('./auth/profile/profile.module').then( m => m.ProfilePageModule)
   },
   {
     path: 'add-producto',
     loadChildren: () => import('./producto/add-producto/add-producto.module').then( m => m.AddProductoPageModule)
-  },
-  {
-    path: 'producto-informacion',
-    loadChildren: () => import('./producto/producto-informacion/producto-informacion.module').then( m => m.ProductoInformacionPageModule)
   },
   {
     path: 'producto-editar',

@@ -8,22 +8,20 @@
           </div>
           <div padding>
             <ion-item>
-              <ion-input name="nombre" type="text" placeholder="Nombre" ngModel required></ion-input>
+              <ion-input name="nombre" type="text" placeholder="Nombre" [(ngModel)]="newUsuario.nombre" required></ion-input>
             </ion-item>
             <ion-item>
-              <ion-input name="apellidos" type="text" placeholder="Apellidos" ngModel required></ion-input>
+              <ion-input name="apellidos" type="text" placeholder="Apellidos" [(ngModel)]="newUsuario.apellidos" required></ion-input>
             </ion-item>
             <ion-item>
-              <ion-input name="nick" type="text" placeholder="Nick" ngModel required></ion-input>
+              <ion-input name="nick" type="text" placeholder="Nick" [(ngModel)]="newUsuario.nick" required></ion-input>
+            </ion-item>
+            
+            <ion-item>
+              <ion-input name="email" type="email" placeholder="your@email.com" [(ngModel)]="newUsuario.email" required></ion-input>
             </ion-item>
             <ion-item>
-              <ion-input name="imagen" type="file" placeholder="Imagen" ngModel required></ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-input name="email" type="email" placeholder="your@email.com" ngModel required></ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-input name="telefono" type="text" placeholder="Teléfono" ngModel></ion-input>
+              <ion-input name="telefono" type="text" placeholder="Teléfono" [(ngModel)]="newUsuario.telefono"></ion-input>
             </ion-item>
             <ion-item>
               <ion-input name="password" type="password" placeholder="Contraseña" ngModel required></ion-input>
