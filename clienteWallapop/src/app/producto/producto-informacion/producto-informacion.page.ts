@@ -10,6 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ProductoInformacionPage implements OnInit {
   producto: Producto;
+  iProd: number = this.route.snapshot.params.id;
   constructor(private productosService: ProductosService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
@@ -19,5 +20,12 @@ export class ProductoInformacionPage implements OnInit {
          this.producto = resp;
        }
      );
+  }
+
+  borrar() {
+    this.productosService.deleteProducto(this.iProd);
+    this.router.navigate(['/ver-productos']);
+    console.log(this.iProd);
+    
   }
 }
