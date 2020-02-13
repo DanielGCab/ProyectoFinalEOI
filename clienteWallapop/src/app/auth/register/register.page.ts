@@ -33,7 +33,7 @@ export class RegisterPage implements OnInit {
       nick: '',
       email: '',
       telefono: '',
-      contrasenya:''
+      contrasenya: ''
     };
   }
 
