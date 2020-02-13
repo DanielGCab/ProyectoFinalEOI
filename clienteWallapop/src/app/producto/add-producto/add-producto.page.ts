@@ -29,13 +29,14 @@ constructor(private productoService: ProductosService, private route: ActivatedR
 ngOnInit() {
   this.inicializarform();
   this.newProducto.usuario = this.usuario;
+  console.log(this.newProducto);
 }
 
 addProducto(form) {
   this.productoService.addProducto(this.newProducto).subscribe(
     resp => {
       this.anyadido = true;
-      this.router.navigate(['/home']);
+      this.router.navigate(['/ver-productos']);
     });
 }
 
@@ -44,7 +45,8 @@ private inicializarform() {
     nombre: '',
     descripcion: '',
     precio: 0.0,
-    imagen: ''
+    imagen: '',
+    usuario: this.usuario
   };
 }
 

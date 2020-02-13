@@ -12,7 +12,7 @@
   
 <br>
   <ion-label><b> Nombre y apellidos:</b> {{usuario.nombre}} {{usuario.apellidos}}</ion-label> <br> <br>
-    <ion-label><b>Email: </b> {{usuario.email}}</ion-label> <br> <br>
+    <ion-label><b>Email: {{usuario.email}}</b> </ion-label> <br> <br>
     <ion-label *ngIf="usuario?.telefono">Teléfono: {{usuario.telefono}}</ion-label> <br>
     <ion-button [routerLink]="['/add-producto', usuario]"><ion-icon name="add"></ion-icon> Añadir Producto</ion-button>
 
