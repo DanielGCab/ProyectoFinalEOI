@@ -32,7 +32,7 @@ console.log(this.usuario);
     this.productoService.addProducto(producto);
   }
   add(){
-    console.log(this.nombre);
+ 
     
   }
 
