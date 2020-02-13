@@ -26,6 +26,5 @@ export class ProductoInformacionPage implements OnInit {
     this.productosService.deleteProducto(this.iProd);
     this.router.navigate(['/ver-productos']);
     console.log(this.iProd);
-    
   }
 }
