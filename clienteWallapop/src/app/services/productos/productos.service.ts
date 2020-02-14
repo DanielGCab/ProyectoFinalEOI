@@ -7,27 +7,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductosService {
-  /*productos: Producto[] = [
-    {
-      nombre: 'Lechuga',
-      descripcion: 'Una lechuga pocha',
-      precio: 20,
-      usuarioProd: 1,
-      imagen: ''
-    },
-    {
-      nombre: 'Silla',
-      descripcion: 'Silla de madera',
-      precio: 10,
-      usuarioProd: 2,
-      imagen: 'assets/wallapof.png'
-    },
-  ];*/
-
   private url = 'http://localhost:8080/api/productos';
 
   constructor(private http: HttpClient) { }
-
 
   getProductos(): Observable<Producto[]> {
     return this.http.get<Producto[]>(this.url);

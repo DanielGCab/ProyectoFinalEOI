@@ -10,14 +10,13 @@ import { Usuario } from 'src/app/interfaces/usuario';
   styleUrls: ['./add-producto.page.scss'],
 })
 export class AddProductoPage implements OnInit {
-  id = this.route.snapshot.params.id;
   usuario: Usuario = {
     id: this.route.snapshot.params.id,
     nombre: this.route.snapshot.params.nombre,
     apellidos: this.route.snapshot.params.apellidos,
     email: this.route.snapshot.params.email,
     nick: this.route.snapshot.params.nick,
-    telefono: this.route.snapshot.params.tetefono,
+    telefono: this.route.snapshot.params.telefono,
     contrasenya: this.route.snapshot.params.contrasenya
   };
 
@@ -50,12 +49,11 @@ private inicializarform() {
   };
 }
 
-changeImage(fileInput: HTMLInputElement) {
-  if (!fileInput.files || fileInput.files.length === 0) { return; }
-  const reader: FileReader = new FileReader();
-  reader.readAsDataURL(fileInput.files[0]);
-  reader.addEventListener('loadend', e => {
-    this.newProducto.imagen = reader.result as string;
-  });
-}
+async changeImage(event: any) {
+  let reader = new FileReader();
+  reader.readAsDataURL(event.target.files[0]);
+  reader.onload = (data: any) => {
+    this.newProducto.imagen = reader.result.toString();
+  }
+  };
 }

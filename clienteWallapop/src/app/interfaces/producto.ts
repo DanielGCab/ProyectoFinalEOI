@@ -7,5 +7,4 @@ export interface Producto {
     precio: number;
     imagen: string;
     usuario?: Usuario;
-
 }

@@ -16,8 +16,8 @@
     </ion-item>
     <ion-item >
       <ion-label color="primary">Imagen del producto</ion-label>
-      <ion-input name="imagen" type="file" class="form-controll" #fileImage (change)="changeImage(fileImage)" [(ngModel)]="newProducto.imagen" required></ion-input>
-      <img [src]="newProducto.imagen" alt="" class="img-thumbnail">
+      <ion-input name="imagen" type="file" class="form-controll" (change)="changeImage($event)" accept="image/*" required></ion-input>
+      <ion-img [src]="newProducto.imagen"></ion-img>
     </ion-item>
     <ion-item >
       <ion-label position="floating" color="primary">Precio del producto</ion-label>
