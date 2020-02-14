@@ -50,10 +50,10 @@ private inicializarform() {
 }
 
 async changeImage(event: any) {
-  let reader = new FileReader();
+  const reader = new FileReader();
   reader.readAsDataURL(event.target.files[0]);
   reader.onload = (data: any) => {
     this.newProducto.imagen = reader.result.toString();
-  }
   };
+  }
 }
